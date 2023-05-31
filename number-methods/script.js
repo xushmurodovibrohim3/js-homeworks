@@ -35,17 +35,22 @@ function pow(n = 1, d = 0) {
    return n ** d
 }
 
+function numAbs(n) {
+   return (n > 0) ? n : -n; 
+}
+
 let Math = {
    floor: numFloor,
    round: numRound,
    ceil: numCeil,
    trunc: getIntegerNumber,
    pow: pow,
-   sqrt: sqrt
+   sqrt: sqrt,
+   abs: numAbs
 }
 
 let num = {
 
 }
 
-console.log(Math.round(7.4));
+console.log(Math.abs(4));
