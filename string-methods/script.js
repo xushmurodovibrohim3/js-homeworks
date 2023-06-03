@@ -1,16 +1,4 @@
 function strSlice(str, start = 0, end = str.length) {
-   //    let a = ""
-   //    if (start < 0 || end < 0) {
-   //       for (let i = str.length + ((start > 0) ? -start : start); i < str.length + ((end > 0) ? -end : end); i++) {
-   //          a += str[i]
-   //       }
-   //       // assalomu 3 -1
-
-
-   //    // for (let i = start; i < end; i++) {
-   //    //    a += str[i]
-   //    // }
-   //    return a
    let res = ""
    start = (start < 0) ? str.length + start : start;
    end = (end < 0) ? str.length + end : end;
@@ -64,7 +52,6 @@ function strStartsWith(str, substr) {
 }
 
 function strEndsWith(str, substr) {
-   // assalomu "a"
    return (strSlice(str, -substr.length, str.length) === substr) ? true : false;
 }
 
