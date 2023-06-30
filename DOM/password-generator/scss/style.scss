@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #18171F;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'JetBrains Mono', monospace;
+   color: #E6E5EA;
+}
+
+.label , p{
+   font-size: 18px;
+}
+
+.wrapper {
+   max-width: 540px;
+
+   .password {
+      background-color: #24232C;
+      padding: 19px 32px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      input[readonly] {
+         background-color: #24232C;
+         width: 50%;
+         flex-grow: 1;
+         border: 0;
+         outline: 0;
+         font-size: 32px;
+         color: #E6E5EA;
+      }
+   }
+
+   &>div:last-child {
+      padding: 24px 32px;
+      background-color: #24232C;
+
+      form {
+         &>div:first-child {
+            margin-bottom: 32px;
+
+            div {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               margin-bottom: 25px;
+
+               #characterLength {
+                  font-size: 32px;
+                  color: #A4FFAF;
+               }
+            }
+
+            input[type="range"] {
+               width: 100%;
+               height: 8px;
+            }
+         }
+
+         &>div:not(div:first-child) {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 19px;
+
+            label {
+               display: block;
+               width: 20px;
+               height: 20px;
+               border: 2px solid #E6E5EA;
+            }
+
+            input[type="checkbox"] {
+               display: none;
+            }
+
+            input[type="checkbox"]:checked~label {
+               border: 0;
+               background-image: url(../img/ckeck-mark.svg);
+            }
+         }
+      }
+      .strength {
+        background: #18171F;
+        padding: 21px 32px 19px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+        & > p{
+         text-transform: uppercase;
+         color: #817D92;
+        }
+        & > div {
+         display: flex;
+         gap: 16px;
+         .recs {
+            display: flex;
+            gap: 8px;
+            div {
+               width: 10px;
+               height: 26px;
+               border: 2px solid #E6E5EA;
+            }
+         }
+        }
+      }
+   }
+
+
+}
+
+
+
+input,
+button {
+   font-family: 'JetBrains Mono', monospace;
+}
+
+button{
+   display: flex;
+   justify-content: center;
+   text-transform: uppercase;
+   align-items: center;
+   gap: 24px;
+   padding: 20px;
+   background-color: #A4FFAF;
+   border: 0;
+   width: 100%;
+   font-size: 18px;
+   color: #24232C;
+}
+
+
+
+@media screen and (max-width: 536px) {
+   body {
+      padding: 0 16px;
+   }
+
+   .label {
+      font-size: 16px;
+   }
+
+   .wrapper {
+      width: 100%;
+
+      .password {
+         padding: 17px 16px 15px 16px;
+
+         input[readonly] {
+            font-size: 24px;
+         }
+      }
+
+      &>div:last-child {
+         padding: 16px;
+
+         form {
+            &>div:first-child {
+               div {
+                  margin-bottom: 13px;
+
+                  #characterLength {
+                     font-size: 24px;
+                  }
+               }
+            }
+
+            &>div:not(div:first-child) {
+               gap: 20px;
+               margin-bottom: 16px;
+            }
+         }
+         .strength{
+            padding: 14px 16px;
+         }
+      }
+   }
+}
