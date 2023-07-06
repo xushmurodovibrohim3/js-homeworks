@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: roboto;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+.top > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+.top > div:first-child label {
+  margin-bottom: 10px;
+}
+.top > div:first-child input {
+  padding: 7px;
+  outline: 0;
+  border-radius: 5px;
+  border: 1px solid rgb(192, 189, 189);
+}
+.top > div:first-child p {
+  color: rgb(77, 77, 77);
+  margin-bottom: 10px;
+}
+.top > div:first-child button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px 9px;
+  background-color: rgb(0, 140, 255);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+.top > div:last-child {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.top > div:last-child .timeOfSeconds {
+  font-size: 55px;
+}
+.top > div:last-child p:nth-child(2) {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.top > div:last-child div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+}
+
+.bottom {
+  border: 1px solid rgb(131, 128, 128);
+  border-radius: 10px;
+  width: 100%;
+}
+.bottom tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.bottom tr td,
+.bottom tr th {
+  padding: 8px;
+  border: 1px solid rgb(131, 128, 128);
+}
+.bottom tr th {
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.bottom tr td {
+  width: 70%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=style.css.map */

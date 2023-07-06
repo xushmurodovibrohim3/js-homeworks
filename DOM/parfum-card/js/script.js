@@ -58,7 +58,7 @@ typeOfProduct.style.cssText = `
    color: #6C7289;
 `
 
-cardInfo.insertAdjacentElement('afterbegin', typeOfProduct)
+cardInfo.append(typeOfProduct)
 
 let heading = document.createElement('h3')
 
@@ -70,7 +70,6 @@ heading.style.cssText = `
    color: #1C232B;
 `
 
-heading.innerText = 'Gabrielle Essence Eau De Parfum'
 
 cardInfo.append(heading)
 

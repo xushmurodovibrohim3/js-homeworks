@@ -74,4 +74,4 @@ let str = {
    includes: strIncludes
 }
 
-console.log(str.includes("assalomu", "z"))
+console.log(str.startsWith("assalomu", "ass"));

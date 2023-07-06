@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <main class="container">
+      <div class="top">
+         <div>
+            <h2>The Current Epoch Unix Timestamp</h2>
+            <label for="input">Enter a Timestamp</label>
+            <input type="number" id="input">
+            <p>Supports Unix timestamps in seconds, milliseconds, microseconds and nanoseconds.</p>
+            <button data-btn>convert</button>
+         </div>
+         <div>
+            <p class="timeOfSeconds">123412341234</p>
+            <p>SECONDS SINCE JAN 01 1970. (UTC)</p>
+            <div>
+               <p id="hours">01</p>
+               <span>:</span>
+               <p id="minutes">01</p>
+               <span>:</span>
+               <p id="seconds">01</p>
+            </div>
+         </div>
+      </div>
+      <table class="bottom" rules="cols">
+         <tr>
+            <th>GMT</th>
+            <td id="gmtTime"></td>
+         </tr>
+         <tr>
+            <th>Your Time Zone</th>
+            <td id="userTimeZoneTime"></td>
+         </tr>
+         <tr>
+            <th>Relative</th>
+            <td id="relative"></td>
+         </tr>
+      </table>
+   </main>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
