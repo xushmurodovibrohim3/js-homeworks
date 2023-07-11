@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>POMODORO</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <h1 class="tittle">pomodoro</h1>
+      <div class="timer__name">
+         <div>pomodoro</div>
+         <div>short break</div>
+         <div>long break</div>
+      </div>
+      <div class="timer">
+         <div>
+            <div>
+               <div>
+                  <p class="minutes">25</p>
+                  <span>:</span>
+                  <p class="seconds">00</p>
+               </div>
+               <button id="start">start</button>
+               <button id="pause">pause</button>
+               <button id="restart">restart</button>
+            </div>
+         </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" modal-open-btn>
+         <g opacity="0.5">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+               d="M24.0382 15.365L26.9658 17.682C27.2294 17.899 27.3058 18.2771 27.1323 18.578L24.3572 23.429C24.1838 23.73 23.823 23.849 23.5108 23.73L20.0559 22.323C19.3414 22.883 18.5574 23.345 17.7111 23.702L17.1907 27.412C17.1353 27.741 16.8508 28 16.5039 28H10.9539C10.607 28 10.3226 27.741 10.2671 27.412L9.74676 23.702C8.90039 23.345 8.11647 22.8761 7.40188 22.323L3.94697 23.73C3.63478 23.856 3.27407 23.73 3.10061 23.429L0.325559 18.578C0.152098 18.27 0.228455 17.892 0.492061 17.682L3.41969 15.365C3.36421 14.917 3.32259 14.462 3.32259 14C3.32259 13.538 3.36421 13.083 3.41969 12.635L0.492061 10.318C0.228455 10.101 0.152098 9.72302 0.325559 9.42199L3.10067 4.57099C3.27407 4.26996 3.63484 4.15098 3.94704 4.26996L7.40194 5.67697C8.11647 5.11699 8.90046 4.65499 9.74682 4.29799L10.2671 0.588001C10.3226 0.259022 10.6071 0 10.954 0H16.504C16.8508 0 17.1353 0.259022 17.1978 0.588001L17.7181 4.29799C18.5644 4.65499 19.3484 5.12394 20.063 5.67697L23.5179 4.26996C23.8301 4.14396 24.1908 4.26996 24.3642 4.57099L27.1393 9.42199C27.3127 9.72997 27.2364 10.108 26.9728 10.318L24.0382 12.635C24.0937 13.083 24.1353 13.538 24.1353 14C24.1353 14.462 24.0937 14.917 24.0382 15.365ZM8.87262 14C8.87262 16.709 11.0441 18.9 13.7289 18.9C16.4138 18.9 18.5853 16.7091 18.5853 14.0001C18.5853 11.2911 16.4138 9.10004 13.7289 9.10004C11.0441 9.10004 8.87262 11.291 8.87262 14Z"
+               fill="#D7E0FF" />
+         </g>
+      </svg>
+   </div>
+   <div class="modal">
+      <div class="modal__content">
+         <div class="title">
+            <p>Settings</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" data-close-modal-window>
+               <g opacity="0.5">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M13.364 2.0502L11.9497 0.635986L6.99999 5.58573L2.05025 0.635986L0.636032 2.0502L5.58578 6.99995L0.636032 11.9497L2.05025 13.3639L6.99999 8.41416L11.9497 13.3639L13.364 11.9497L8.41421 6.99995L13.364 2.0502Z"
+                     fill="#1E213F" />
+               </g>
+            </svg>
+         </div>
+         <hr>
+         <div class="time__settings">
+            <p>TIME (MINUTES)</p>
+            <div>
+               <div>
+                  <div>
+                     <label for="pomodoroLength">pomodoro</label>
+                     <input type="number" id="pomodoroLength" value="25">
+                  </div>
+               </div>
+               <div>
+                  <div>
+                     <label for="shortBreakLength">short break</label>
+                     <div><input type="number" id="shortBreakLength" value="5"></div>
+                  </div>
+               </div>
+               <div>
+                  <div>
+                     <label for="pomodoroLength">pomodoro</label>
+                     <div><input type="number" id="pomodoroLength" value="15"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="fonts">
+            <p>font</p>
+            <div>
+               <div>
+                  <input type="radio" name="font" id="font1" checked>
+                  <label for="font1">Aa</label>
+               </div>
+               <div>
+                  <input type="radio" name="font" id="font2">
+                  <label for="font2">Aa</label>
+               </div>
+               <div>
+                  <input type="radio" name="font" id="font3">
+                  <label for="font3">Aa</label>
+               </div>
+            </div>
+            
+         </div>
+         <hr>
+         <div class="colors">
+            <p>color</p>
+            <div>
+               <div>
+                  <input type="radio" name="color" id="color1" checked>
+                  <label for="color1">
+                     <svg height="10px" width="10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.837 17.837" xml:space="preserve" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                           <g>
+                              <path style="fill:#030104;"
+                                 d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27 c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0 L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z">
+                              </path>
+                           </g>
+                        </g>
+                     </svg>
+                  </label>
+                  
+               </div>
+               <div>
+                  <input type="radio" name="color" id="color2">
+                  <label for="color2">
+                     <svg height="10px" width="10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.837 17.837" xml:space="preserve" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                           <g>
+                              <path style="fill:#030104;"
+                                 d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27 c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0 L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z">
+                              </path>
+                           </g>
+                        </g>
+                     </svg>
+                  </label>
+               </div>
+               <div>
+                  <input type="radio" name="color" id="color3">
+                  <label for="color3">
+                     <svg height="10px" width="10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.837 17.837" xml:space="preserve" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                           <g>
+                              <path style="fill:#030104;"
+                                 d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27 c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0 L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z">
+                              </path>
+                           </g>
+                        </g>
+                     </svg>
+                  </label>
+               </div>
+            </div>
+         </div>
+         <button id="submitSettings">Apply</button>
+      </div>
+   </div>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

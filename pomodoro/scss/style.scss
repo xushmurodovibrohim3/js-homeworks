@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #1E213F;
+   font-family: 'Kumbh Sans', sans-serif;
+   color: #D7E0FF;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+button {
+   font-family: Kumbh Sans;
+}
+
+.wrapper {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   .tittle {
+      font-size: 32px;
+      margin-bottom: 55px;
+   }
+
+   .timer__name {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 7px;
+      border-radius: 31.5px;
+      background: #161932;
+      margin-bottom: 45px;
+
+      &>div {
+         padding: 19px 25px 15px 26px;
+         border-radius: 26.5px;
+
+         &:first-child {
+            background-color: #F87070;
+            color: #1E213F;
+         }
+      }
+   }
+
+   .timer {
+      border-radius: 410px;
+      background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+      box-shadow: 50px 50px 100px 0px #121530, -50px -50px 100px 0px #272C5A;
+      width: 410px;
+      height: 410px;
+      margin-bottom: 63px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+
+      &>div {
+         padding: 11px;
+         width: 100%;
+         height: 100%;
+         background-color: #F87070;
+         border-radius: 100%;
+
+         &>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            border-radius: 100%;
+            background: #161932;
+            padding: 14px;
+            font-size: 100px;
+
+            div {
+               display: flex;
+               margin-bottom: 14px;
+            }
+
+            button {
+               display: none;
+               background-color: #161932;
+               font-family: Kumbh Sans;
+               font-size: 16px;
+               letter-spacing: 15px;
+               border: 0;
+               text-transform: uppercase;
+               cursor: pointer;
+               color: #D7E0FF;
+
+               &:hover {
+                  color: #F87070;
+               }
+            }
+
+            #start {
+               display: block;
+            }
+         }
+      }
+
+
+   }
+}
+
+.modal {
+   display: none;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   background: rgba(10, 12, 28, 0.50);
+   width: 100vw;
+   height: 100vh;
+
+
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 34px 40px 0 40px;
+      width: 540px;
+      background-color: #FFFFFF;
+      border-radius: 25px;
+
+      hr {
+         opacity: 0.10000000149011612;
+         background: #161932;
+      }
+
+      &>.title {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+
+         p {
+            font-size: 28px;
+            color: #161932;
+         }
+      }
+
+      &>div {
+         &>p {
+            font-size: 13px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #161932;
+         }
+      }
+
+      .time__settings {
+         p {
+            margin-bottom: 24px;
+         }
+
+         &>div {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            div {
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+
+               input {
+                  padding: 16px 16px 15px 16px;
+                  width: 100%;
+                  border: 0;
+                  outline: 0;
+                  border-radius: 10px;
+                  background: #EFF1FA;
+               }
+            }
+         }
+      }
+
+      .fonts,
+      .colors {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         &>div {
+            display: flex;
+            gap: 16px;
+         }
+
+         label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: #EFF1FA;
+            color: #1E213F;
+         }
+
+         input {
+            display: none;
+         }
+      }
+
+      .fonts {
+         input:checked~label {
+            background-color: #161932;
+            color: #FFFFFF;
+         }
+
+         [for="font2"] {
+            font-family: 'Roboto Slab', serif;
+         }
+
+         [for="font3"] {
+            font-family: 'Space Mono', monospace;
+         }
+      }
+
+      .colors {
+         label {
+            svg {
+               display: none;
+            }
+         }
+
+         [for="color1"] {
+            background-color: #F87070;
+         }
+
+         [for="color2"] {
+            background-color: #70F3F8;
+         }
+
+         [for="color3"] {
+            background-color: #D881F8;
+         }
+
+         input:checked~label {
+            svg {
+               display: block;
+            }
+         }
+      }
+
+      button {
+         padding: 21px 47px 16px 47px;
+         margin: 0 auto;
+         transform: translateY(29px);
+         width: max-content;
+         background-color: #F87070;
+         border: 0;
+         font-size: 16px;
+         border-radius: 26.5px;
+         color: white;
+      }
+   }
+}
+
+@media screen and (max-width: 416px) {
+   body {
+      padding: 0 24px;
+   }
+
+   .wrapper {
+      .tittle {
+         font-size: 24px;
+         margin-bottom: 45px;
+      }
+
+      .timer__name {
+         &>div {
+            font-size: 12px;
+            padding: 16px 22px 14px 22px;
+         }
+      }
+
+      .timer {
+         width: 300px;
+         height: 300px;
+
+         &>div {
+            &>div {
+               font-size: 80px;
+               ;
+            }
+         }
+      }
+   }
+
+   .modal {
+      padding: 37px;
+
+      &__content {
+         padding: 24px 24px 0 24px;
+
+         &>.title {
+            p {
+               font-size: 20px;
+            }
+         }
+
+         .time__settings {
+            &>div {
+               flex-direction: column;
+
+               div {
+                  flex-direction: row;
+                  justify-content: space-between;
+               }
+            }
+         }
+
+         &>div:not(.title) {
+            flex-direction: column;
+            gap: 18px;
+         }
+
+         &>div {
+            p {
+               font-size: 11px;
+            }
+         }
+      }
+   }
+}
